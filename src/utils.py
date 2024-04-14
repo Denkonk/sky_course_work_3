@@ -19,14 +19,24 @@ def filter_operations(operations):
 
 def sorted_operations(transactions):
     """
-    Сортирует транзакции по дате, от самых новых к самым старым.
+    Сортирует транзакции по дате, от самых новых к самым старым
     """
     sorted_transactions = sorted(transactions, key=lambda x: datetime.datetime.fromisoformat(x['date']), reverse=True)
     return sorted_transactions
 
+def get_first_5_trans(transactions):
+    """
+    Получает первые 5 транзакций из списка операций
+    """
+    first_5_transactions = transactions[:5]
+    return first_5_transactions
+
+
+
 
 #print(filter_operations(load_json_data(file_path)))
 #print(sorted_operations(filter_operations(load_json_data(file_path))))
+#print(get_first_5_trans(sorted_operations(filter_operations(load_json_data(file_path)))))
 #print(datetime.datetime.fromisoformat("2018-12-24T20:16:18.819037"))
 
 
