@@ -56,6 +56,13 @@ def mask_number_from_to(number_card):
         second_part_result = second_part
     return f"{first_part} {second_part_result}"
 
+def get_amount(transactions):
+    """
+    Получение суммы и валюты транзакции
+    """
+    transaction_description = transactions['operationAmount']['amount']
+    transaction_name = transactions['operationAmount']['currency']['name']
+    return f'{transaction_description} {transaction_name}'
 
 
 
@@ -72,10 +79,10 @@ print(transaction_first_5)
 #
 # print(dates)
 
-# for number_card in transaction_first_5:
-#     print(mask_number_from_to(number_card['from']))
-
-
+# for transactions in transaction_first_5:
+# #     print(mask_number_from_to(number_card['from']))
+#
+#     print(get_amount(transactions))
 
 
 #print(filter_operations(load_json_data(file_path)))
