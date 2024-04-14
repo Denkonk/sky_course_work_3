@@ -36,7 +36,7 @@ def get_data_trans(transactions):
     Перевода даты в формат ДД.ММ.ГГГГ
     """
     date_parts = transactions['date'].split('T')[0].split('-')
-    date_result = f"{date_parts[2]}.{date_parts[1]}.{date_parts[0]}."
+    date_result = f"{date_parts[2]}.{date_parts[1]}.{date_parts[0]}"
     return date_result
 
 def mask_number_from_to(number_card):
@@ -70,9 +70,9 @@ def get_amount(transactions):
 
 
 
-transaction_first_5 = get_first_5_trans(sorted_operations(filter_operations(load_json_data(file_path))))
-
-print(transaction_first_5)
+# transaction_first_5 = get_first_5_trans(sorted_operations(filter_operations(load_json_data(file_path))))
+#
+# print(transaction_first_5)
 
 #
 # dates = [get_data_trans(transaction) for transaction in transaction_first_5]
