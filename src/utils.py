@@ -1,7 +1,11 @@
 import json
 import datetime
+import os
 
-file_path = r'C:\Programm\Programm\Python\python_kurs_3\data\operations.json'
+#file_path = r'C:\Programm\Programm\Python\python_kurs_3\data\operations.json'
+file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'operations.json')
+
+
 def load_json_data(file_path):
     """
     Загружает данные из файла JSON
