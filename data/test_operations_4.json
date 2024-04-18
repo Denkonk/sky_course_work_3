@@ -1,0 +1,14 @@
+{
+    "id": 596171168,
+    "state": "EXECUTED",
+    "date": "2018-07-11T02:26:18.671407",
+    "operationAmount": {
+      "amount": "79931.03",
+      "currency": {
+        "name": "руб.",
+        "code": "RUB"
+      }
+    },
+    "description": "Открытие вклада",
+    "to": "Счет 72082042523231456215"
+  }
